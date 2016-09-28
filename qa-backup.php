@@ -1,5 +1,5 @@
 <?php
-
+define('BAKFOLDER','qa-content/backup/');
 /*
 	Question2Answer (c) 2011, Gideon Greenspan
 
@@ -59,8 +59,8 @@ class qa_backup {
 				
 		global $qa_root_url_relative, $QA_CONST_PATH_MAP;
 		
-		$this->backupDirUrl = $qa_root_url_relative . "qa-content/backup/";
-		$this->backupDir = QA_BASE_DIR."qa-content/backup/";
+		$this->backupDirUrl = $qa_root_url_relative . BAKFOLDER;
+		$this->backupDir = QA_BASE_DIR.BAKFOLDER;
 		if (!is_dir($this->backupDir))
 			mkdir($this->backupDir, 0755);
 
@@ -153,7 +153,7 @@ class qa_backup {
 	
 	function doBackup()
 	{
-		$path = QA_BASE_DIR."qa-content/backup";
+		$path = QA_BASE_DIR.BAKFOLDER;
 		// create backup folder
 		if (!is_dir($path))
 			mkdir($path, 0755);
@@ -195,7 +195,7 @@ class qa_backup {
 			return;
 		}
 		
-		$path = QA_BASE_DIR."qa-content/backup" . "/" . $fileName;
+		$path = QA_BASE_DIR.BAKFOLDER . $fileName;
 		if (!file_exists($path))
 		{
 			$this->error = "File does not exist: ". $path;
