@@ -1,9 +1,12 @@
 =============================
 Question2Answer Database Backup 1.0
 =============================
+This repo is forked from https://github.com/KrzysztofKielce/q2a-backup
 -----------------------------
 Compatible with Q2A versions:
 -----------------------------
+- 1.7.4 (Tested by Jumping Yang[yzpcreate@qq.com])
+...
 - 1.5
 - 1.4.3
 - ...others should be okay, yet weren't tested.
@@ -28,7 +31,7 @@ Installation
 #. Get the source code for this plugin from github_, either using git_, or downloading directly:
 
    - To download using git, install git and then type 
-     ``git clone git@github.com:KrzysztofKielce/q2a-backup.git backup``
+     ``git clone git@github.com:JumpingYang001/q2a-backup.git backup``
      at the command prompt (on Linux, Windows is a bit different)
    - To download directly, go to the `project page`_ and click **Download**
 
