@@ -61,8 +61,12 @@ class qa_backup {
 		
 		$this->backupDirUrl = $qa_root_url_relative . BAKFOLDER;
 		$this->backupDir = QA_BASE_DIR.BAKFOLDER;
-		if (!is_dir($this->backupDir))
+		if (!is_dir($this->backupDir)){
 			mkdir($this->backupDir, 0755);
+			if (!is_dir($this->backupDir)){
+				$this->error = 'You do not have permission to create backup folder:'.$this->backupDir.'<br/> Please create and set it manually!';
+			}
+		}    
 
 		if (qa_clicked('backup_send_upload_file')) {
 			$this->saveChanges();
