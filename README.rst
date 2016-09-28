@@ -1,12 +1,14 @@
 =============================
 Question2Answer Database Backup 1.0
 =============================
+
 This repo is forked from https://github.com/KrzysztofKielce/q2a-backup
+
 -----------------------------
 Compatible with Q2A versions:
 -----------------------------
 - 1.7.4 (Tested by Jumping Yang[yzpcreate@qq.com])
-...
+- ...
 - 1.5
 - 1.4.3
 - ...others should be okay, yet weren't tested.
