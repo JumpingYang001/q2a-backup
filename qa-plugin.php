@@ -26,16 +26,15 @@
 */
 
 /*
-	Plugin Name: Database Backup
+	Plugin Name: Database Backup（数据库备份）
 	Plugin URI: 
-	Plugin Description: Database import/export utility
-	Plugin Version: 1.0
-	Plugin Date: 2011-10-20
-	Plugin Author: Krzysztof Kielce
+	Plugin Description: Database import/export utility(数据库导入导出实用程序)
+	Plugin Version: 1.0-2.0
+	Plugin Date: 2011-10-20,2016-09-28
+	Plugin Author: Krzysztof Kielce, Jumping Yang
 	Plugin License: GPLv2
-	Plugin Minimum Question2Answer Version: 1.4
+	Plugin Minimum Question2Answer Version: 1.4-1.7.4
 */
-
 
 	if (!defined('QA_VERSION')) { // don't allow this page to be requested directly from browser
 		header('Location: ../../');
@@ -43,8 +42,10 @@
 	}
 
 
+	qa_register_plugin_phrases('qa-backup-lang-*.php', 'qa_backup_lang');
 	qa_register_plugin_layer('qa-backup-layer.php', 'Backup Widget Form Layer');	
 	qa_register_plugin_module('module', 'qa-backup.php', 'qa_backup', 'Database Backup');
+
 
 /*
 	Omit PHP closing tag to help avoid accidental output

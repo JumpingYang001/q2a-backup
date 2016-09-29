@@ -65,9 +65,9 @@ class qa_backup {
 			mkdir($this->backupDir, 0755);
 		}
 		if (!is_dir($this->backupDir)){
-			$this->error = 'You do not have permission to create backup folder:'.$this->backupDir.'<br/> Please create and set it manually!';
+			$this->error = qa_lang('qa_backup_lang/backup_success1').$this->backupDir.qa_lang('qa_backup_lang/backup_success2');
 		} else {
-			$this->msg = 'Welcome to use backup and restore tool for question2answer!';
+			$this->msg = qa_lang('qa_backup_lang/backup_fail');
 		}
 
 		if (qa_clicked('backup_send_upload_file')) {
@@ -79,7 +79,7 @@ class qa_backup {
 		if (qa_clicked('backup_export_button')) {
 			$this->saveChanges();
 			$this->doBackup();
-			$this->msg = 'Database Backup done.';
+			$this->msg = qa_lang('qa_backup_lang/backup_backup_done');
 		}
 
 		if (qa_clicked('backup_delete_files')) {
@@ -92,7 +92,7 @@ class qa_backup {
 		if (qa_clicked('backup_import_button')) {
 			$this->saveChanges();
 			$this->doImport();
-			$this->msg = 'Database Import done';
+			$this->msg = qa_lang('qa_backup_lang/backup_import_done');
 		}
 		
 		
@@ -104,19 +104,19 @@ class qa_backup {
 					'label' => $this->listedFiles,
 					'type' => 'static',
 					'value' => '<input type="file" name="backup_upload_file" onmouseout="this.className=\'qa-form-tall-button qa-form-tall-button-0\';" onmouseover="this.className=\'qa-form-tall-hover qa-form-tall-hover-0\';" class="qa-form-tall-button qa-form-tall-button-0" /> '.
-							   '<input type="submit" value="Upload to server" name="backup_send_upload_file" onmouseout="this.className=\'qa-form-tall-button qa-form-tall-button-0\';" onmouseover="this.className=\'qa-form-tall-hover qa-form-tall-hover-0\';" onclick="bck_t=\'\'" class="qa-form-tall-button qa-form-tall-button-0" /><br />'.
-							   '<input type="submit" value="Delete all files" name="backup_delete_files" onmouseout="this.className=\'qa-form-tall-button qa-form-tall-button-0\';" onmouseover="this.className=\'qa-form-tall-hover qa-form-tall-hover-0\';" onclick="bck_t=\'delete all files from a backup folder\'" class="qa-form-tall-button qa-form-tall-button-0" />',
+							   '<input type="submit" value="'.qa_lang('qa_backup_lang/backup_send_upload_file').'" name="backup_send_upload_file" onmouseout="this.className=\'qa-form-tall-button qa-form-tall-button-0\';" onmouseover="this.className=\'qa-form-tall-hover qa-form-tall-hover-0\';" onclick="bck_t=\'\'" class="qa-form-tall-button qa-form-tall-button-0" /><br />'.
+							   '<input type="submit" value="'.qa_lang('qa_backup_lang/backup_delete_files').'" name="backup_delete_files" onmouseout="this.className=\'qa-form-tall-button qa-form-tall-button-0\';" onmouseover="this.className=\'qa-form-tall-hover qa-form-tall-hover-0\';" onclick="bck_t=\'delete all files from a backup folder\'" class="qa-form-tall-button qa-form-tall-button-0" />',
 						
 					'tags' => 'NAME="backup_importFile"',
 				),
 				array(
-					'label' => 'Compress backups.',
+					'label' => qa_lang('qa_backup_lang/backup_compress_enable'),
 					'type' => 'checkbox',
 					'value' => qa_opt('backup_compress_enable'),
 					'tags' => 'NAME="backup_compress_enable"',
 				),
 				array(
-					'label' => 'Backup Q2A tables only - those with `'.QA_MYSQL_TABLE_PREFIX.'` prefix. <br />If you uncheck this option, you will backup whole batabase. <br />(Useful for more than one Q2A instance in one database).',
+					'label' => qa_lang('qa_backup_lang/backup_only_qa_tables_enable1').QA_MYSQL_TABLE_PREFIX.qa_lang('qa_backup_lang/backup_only_qa_tables_enable2'),
 					'type' => 'checkbox',
 					'value' => qa_opt('backup_only_qa_tables_enable'),
 					'tags' => 'NAME="backup_only_qa_tables_enable"',
@@ -130,8 +130,7 @@ class qa_backup {
 					// 'tags' => 'NAME="backup_file_max_size_field"',
 				// ),
 				array(
-					'label' => '<span style="color:#f99; font-size:20px; text-align:center;">Caution! Use carefully. Risk of losing all your data.<br />'.
-							   '<span style="font-size:15px;">(While restoring, it is always recommended to <a href="'.$this->urltoroot.'README.rst" target="backup_readme">restore in a safe way</a>).<br />In case of problems, see <a href="'.$this->urltoroot.'README.rst" target="backup_readme">TROUBLESHOOTING</a> section.</span></span>',
+					'label' => qa_lang('qa_backup_lang/backup_import_label1').$this->urltoroot.qa_lang('qa_backup_lang/backup_import_label2').$this->urltoroot.qa_lang('qa_backup_lang/backup_import_label3'),
 					'type' => 'custom',
 					'tags' => 'NAME="backup_import_label"',
 				),
