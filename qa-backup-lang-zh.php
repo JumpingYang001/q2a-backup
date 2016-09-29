@@ -44,6 +44,8 @@
 		'backup_import_label3' => 'README.rst" target="backup_readme">故障排除</a> 部分.</span></span>',
 		'backup_backup_done' => '数据库备份完成.',
 		'backup_import_done' => '数据库导入完成',
+		'backup_do_backup' => '备份数据库',
+		'backup_do_import' => '导入选中的备份文件',
 	);
 	
 

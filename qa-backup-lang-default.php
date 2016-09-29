@@ -44,6 +44,8 @@
 		'backup_import_label3' => 'README.rst" target="backup_readme">TROUBLESHOOTING</a> section.</span></span>',
 		'backup_backup_done' => 'Database Backup done.',
 		'backup_import_done' => 'Database Import done',
+		'backup_do_backup' => 'Do the backup !',
+		'backup_do_import' => 'Import selected file !',
 	);
 	
 

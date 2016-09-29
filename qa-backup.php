@@ -138,11 +138,11 @@ class qa_backup {
 			
 			'buttons' => array(
 				array(
-					'label' => 'Do the backup !',
+					'label' => qa_lang('qa_backup_lang/backup_do_backup'),
 					'tags' => 'NAME="backup_export_button" onmouseup="bck_t=\'\'"',
 				),
 				array(
-					'label' => 'Import selected file !',
+					'label' => qa_lang('qa_backup_lang/backup_do_import'),
 					'tags' => 'NAME="backup_import_button" onmouseup="bck_t=\'execute EVERYTHING that is in the selected file. If you import wrong file, you can have mess in your database or even data loss.\nIt is recommended to make a backup first.\n\nNOTE: Backup files done with this plugin delete previous data and then do the import\'"',
 				),
 			),
