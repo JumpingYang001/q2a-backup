@@ -40,8 +40,8 @@
 		'backup_only_qa_tables_enable2' => '` 为前缀的Q2A数据表. <br />如果取消选中此选项，将备份整个数据库。 <br />(可用于在一个数据库中的多个Q2A实例).',
 		'backup_import_label1' => '<span style="color:#f99; font-size:20px; text-align:center;">警告！请小心使用。失去所有数据的风险。<br />'.
 							   '<span style="font-size:15px;">（在还原时，我们总是建议 <a href="',
-		'backup_import_label2' => 'README.rst" target="backup_readme">以一种安全的方式还原</a>).<br />如有问题，请参阅<a href="',
-		'backup_import_label3' => 'README.rst" target="backup_readme">故障排除</a> 部分.</span></span>',
+		'backup_import_label2' => 'README.md" target="backup_readme">以一种安全的方式还原</a>).<br />如有问题，请参阅<a href="',
+		'backup_import_label3' => 'README.md" target="backup_readme">故障排除</a> 部分.</span></span>',
 		'backup_backup_done' => '数据库备份完成.',
 		'backup_import_done' => '数据库导入完成',
 		'backup_do_backup' => '备份数据库',
