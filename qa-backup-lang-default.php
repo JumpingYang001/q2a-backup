@@ -40,8 +40,8 @@
 		'backup_only_qa_tables_enable2' => '` prefix. <br />If you uncheck this option, you will backup whole batabase. <br />(Useful for more than one Q2A instance in one database).',
 		'backup_import_label1' => '<span style="color:#f99; font-size:20px; text-align:center;">Caution! Use carefully. Risk of losing all your data.<br />'.
 							   '<span style="font-size:15px;">(While restoring, it is always recommended to <a href="',
-		'backup_import_label2' => 'README.rst" target="backup_readme">restore in a safe way</a>).<br />In case of problems, see <a href="',
-		'backup_import_label3' => 'README.rst" target="backup_readme">TROUBLESHOOTING</a> section.</span></span>',
+		'backup_import_label2' => 'README.md" target="backup_readme">restore in a safe way</a>).<br />In case of problems, see <a href="',
+		'backup_import_label3' => 'README.md" target="backup_readme">TROUBLESHOOTING</a> section.</span></span>',
 		'backup_backup_done' => 'Database Backup done.',
 		'backup_import_done' => 'Database Import done',
 		'backup_do_backup' => 'Do the backup !',
