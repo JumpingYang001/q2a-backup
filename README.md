@@ -4,6 +4,10 @@
 
 This repo is forked from https://github.com/KrzysztofKielce/q2a-backup
 
+Search "[q2a-backup-plugin fork:true]" in github can see this forked repo.
+
+[q2a-backup-plugin fork:true]:https://github.com/search?utf8=%E2%9C%93&q=q2a-backup-plugin+fork%3Atrue&type=Repositories&ref=searchresults
+
 -----------------------------
 Plugin screenshot:
 -----------------------------
